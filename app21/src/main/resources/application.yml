@@ -1,0 +1,49 @@
+spring:
+  profiles:
+    active:
+    - dev 
+---
+server:
+  port: 1234
+spring:
+  application:
+    name: ICIC-Application
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.driver
+    url: jdbc:mysql://localhost:3306/tarakdb
+    username: root
+    password: root
+  config:
+    activate:
+      on-profile:
+      - prod
+---
+server:
+  port: 4321
+spring:
+  application:
+    name: HDFC-Application
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SCOTT
+    password: tiger
+  config:
+    activate:
+      on-profile:
+      - test
+---
+server:
+  port: 2233
+spring:
+  application:
+    name: KOTAK-Application
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=master
+    username: Tarak
+    password: software
+  config:
+    activate:
+      on-profile:
+      - dev

@@ -1,0 +1,5 @@
+package com.taraktech.configure;
+
+public class EmployeeConfig {
+
+}

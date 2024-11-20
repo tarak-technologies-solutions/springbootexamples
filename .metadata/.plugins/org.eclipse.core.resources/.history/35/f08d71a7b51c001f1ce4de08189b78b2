@@ -1,0 +1,5 @@
+package com.taraktech.entities;
+
+public class Employee {
+
+}

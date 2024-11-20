@@ -1,0 +1,5 @@
+package com.taraktech.service;
+
+public interface EmployeeService {
+
+}

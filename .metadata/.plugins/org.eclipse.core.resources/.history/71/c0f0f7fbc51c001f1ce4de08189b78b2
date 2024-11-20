@@ -1,0 +1,5 @@
+package com.taraktech.exception;
+
+public class GlobalEMployeeException {
+
+}

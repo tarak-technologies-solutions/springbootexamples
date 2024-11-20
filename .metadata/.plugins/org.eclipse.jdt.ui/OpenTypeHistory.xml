@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=springcrudrepository/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.taraktech.springcrudrepository.services{EmployeeService.java[EmployeeService" modifiers="513" timestamp="1688307640221"/>
+    <typeInfo handle="=springboot22/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.taraktech.springboot22.service{EmployeeService.java[EmployeeService" modifiers="513" timestamp="1693904721605"/>
+    <typeInfo handle="=EmployeeProject1/C:\/Users\/HP\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.3.0\/spring-data-jpa-3.3.0.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.3.0=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1715940857000"/>
+    <typeInfo handle="=EmployeeProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.taraktech.service{EmployeeService.java[EmployeeService" modifiers="513" timestamp="1716875539680"/>
+</typeInfoHistroy>

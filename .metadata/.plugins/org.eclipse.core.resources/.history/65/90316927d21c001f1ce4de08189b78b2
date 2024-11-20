@@ -1,0 +1,43 @@
+package com.taraktech.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.taraktech.entities.Employee;
+import com.taraktech.exception.EmployeeAlreadyExits;
+import com.taraktech.exception.EmployeeNotExits;
+import com.taraktech.repository.EmployeeRepo;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+	private EmployeeRepo employeeRepo;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		List<Employee> emps = employeeRepo.findAll();
+		return emps;
+	}
+
+	@Override
+	public Employee getEmployeeById(Integer eno) {
+		return employeeRepo.getByEno(eno).orElseThrow(() -> new EmployeeNotExits("Employee Not Fund...!"));
+	}
+
+	@Override
+	public ResponseEntity<String> saveEmployee(Employee employee) {
+		//Employee employee2 = employeeRepo.getByEno(employee.getEno()).get();
+		employee.setPassword(passwordEncoder.encode(employee.getPassword()));
+		employeeRepo.save(employee);
+		return new ResponseEntity<>("Employee successfully saved...!",HttpStatus.CONFLICT);
+	}
+
+}
